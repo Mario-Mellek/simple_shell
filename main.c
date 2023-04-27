@@ -23,7 +23,10 @@ int main(int __attribute__((unused)) argc, char **argv)
 		/*Reads user input*/
 		read = getline(&line, &len, stdin);
 		if (read == -1)
+		{
+			putchar('\n');
 			break;
+		}
 		token = strtok(line, " ");
 		while (token != NULL && j < MAX_COMMAND / 2)
 		{
@@ -31,7 +34,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 			token = strtok(NULL, " ");
 		}
 		args[j] = NULL;
-		/*Removes newline character*/
 		line[read - 1] = '\0';
 		/*Sets the 1st argument to input, NULL terminated*/
 		if (j > 0)
