@@ -16,6 +16,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 	/*Invoking an infinte loop*/
 	while (1)
 	{
+		j = 0;
 		/*The Prompt being flushed to appear on every submission*/
 		printf("\033[32m#cisfun$\033[0m ");
 		fflush(stdout);
