@@ -12,5 +12,6 @@
 extern char **environ;
 void commandExec(char *args[], char *program_name);
 int exit_checker(char *line);
+int env_checker(char *line);
 
 #endif

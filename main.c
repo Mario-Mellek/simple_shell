@@ -13,7 +13,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 	char *args[MAX_COMMAND / 2 + 1];
 	ssize_t read;
 
-	/*Invoking an infinte loop*/
 	while (1)
 	{
 		j = 0;
@@ -25,7 +24,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 		read = getline(&line, &len, stdin);
 		if (read == -1)
 			break;
-		/*tokenize the command*/
 		token = strtok(line, " ");
 		while (token != NULL && j < MAX_COMMAND / 2)
 		{
@@ -40,9 +38,10 @@ int main(int __attribute__((unused)) argc, char **argv)
 			args[0] = args[0];
 		else
 			args[0] = line;
-		/* Check if the user entered 'exit' */
 		if (exit_checker(line))
 			break;
+		if (env_checker(line))
+			continue;
 		commandExec(args, argv[0]);
 	}
 	free(line);
