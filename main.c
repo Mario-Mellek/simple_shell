@@ -19,7 +19,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 	while (1)
 	{
 		/*The Prompt being flushed to appear on every submission*/
-		printf("\033[32m#cisfun$\033[0m ");
+		printf("#cisfun$ ");
 		fflush(stdout);
 
 		/*Reads user input*/
