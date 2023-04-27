@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * env_checker - Prints the current environment variables.
+ * @line: User input.
+ * Return: 1 if the user entered the 'env' command, 0 otherwise.
+ */
+
 int env_checker(char *line)
 {
 	size_t i;
