@@ -9,8 +9,8 @@
 
 int main(int __attribute__((unused)) argc, char **argv)
 {
-	size_t i, len = 0;
-	char *line = NULL;
+	size_t i, j, len = 0;
+	char *token, *line = NULL;
 	char *args[MAX_COMMAND / 2 + 1];
 	ssize_t read;
 
@@ -26,12 +26,27 @@ int main(int __attribute__((unused)) argc, char **argv)
 		read = getline(&line, &len, stdin);
 		if (read == -1)
 			break;
+
+		/*tokenize the command*/
+		token = strtok(line, " ");
+		while (token != NULL && j < MAX_COMMAND / 2)
+		{
+			args[j++] = token;
+			token = strtok(NULL, " ");
+		}
+		args[j] = NULL;
+
 		/*Removes newline character*/
 		line[read - 1] = '\0';
 
 		/*Sets the 1st argument to input, NULL terminated*/
-		args[0] = line;
-		args[1] = NULL;
+		if (j > 0) {
+			args[0] = args[0];
+		}
+		else
+		{
+			args[0] = line;
+                }
 
 		/*exit checker*/
 		for (i = 0; i < 4; i++)
