@@ -7,14 +7,16 @@
 #define MAX_COMMAND 50
 
 extern char **environ;
-void commandExec(char *args[]);
+void commandExec(char *args[], char *program_name);
 
 /**
  * main - A UNIX command line interpreter.
+ * @argc: argument count (not used)
+ * @argv: argument vector storing the program name at 0 index
  * Return: 0 when succesful
  */
 
-int main(void)
+int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t i, len = 0;
 	char *line = NULL;
@@ -26,7 +28,7 @@ int main(void)
 	while (1)
 	{
 		/*The Prompt being flushed to appear on every submission*/
-		printf("\033[32m($)\033[0m ");
+		printf("\033[32m#cisfun$\033[0m ");
 		fflush(stdout);
 
 		/*Reads user input*/
@@ -49,7 +51,7 @@ int main(void)
 		if (i == 4 && line[4] == '\0')
 			break;
 
-		commandExec(args);
+		commandExec(args, argv[0]);
 	}
 	free(line);
 	return (0);
@@ -58,9 +60,10 @@ int main(void)
 /**
  * commandExec - Execustes a command in a child process.
  * @args: Array of strings containing the command.
+ * @program_name: name of the program passed in from argv[0]
  */
 
-void commandExec(char *args[])
+void commandExec(char *args[], char *program_name)
 {
 	pid_t pid;
 
@@ -70,7 +73,7 @@ void commandExec(char *args[])
 	{
 		/*Child process executes the command*/
 		execve(args[0], args, environ);
-		perror(args[0]);
+		perror(program_name);
 		exit(0);
 	}
 	else
