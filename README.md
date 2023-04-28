@@ -1,4 +1,37 @@
-# Learning Objectives
+# Simple Shell
+
+Simple Shell is a basic UNIX command-line interpreter that can execute commands and their arguments. It was built as part of the requirements for the Holberton School System Programming curriculum.
+
+## Functionality
+
+Simple Shell allows users to enter commands with their arguments just as they would with a standard UNIX shell. It includes basic features such as running commands with their arguments and exiting the shell with the `exit` command or by pressing `Ctrl + D`.
+
+## Features
+
+- Run commands with their arguments
+- Exit shell with `exit` command or by pressing `Ctrl + D`
+
+## Getting Started
+
+To use Simple Shell, clone this repository by running the following command in your terminal:
+`git clone https://github.com/Mario-Mellek/simple_shell.git`
+Compile the source code using the following command:
+`gcc -Wall -Werror -Wextra -pedantic *.c -o shell`
+
+To run the Simple Shell, execute the `shell` file created by the compilation command: `./shell`
+
+Once the shell is running, you can enter commands with their arguments just as you would with a standard UNIX shell.
+## Authors
+
+- [Mario Mellek](https://github.com/Mario-Mellek)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mario-Mellek/simple_shell/blob/master/LICENSE) file for details.
+
+## LICENSE
+
+MIT License
 
 ## General
 
