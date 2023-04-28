@@ -9,6 +9,7 @@ Simple Shell allows users to enter commands with their arguments just as they wo
 ## Features
 
 - Run commands with their arguments
+- Handles the PATH
 - Exit shell with `exit` command or by pressing `Ctrl + D`
 
 ## Getting Started
