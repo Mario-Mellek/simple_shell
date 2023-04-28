@@ -25,15 +25,13 @@ Once the shell is running, you can enter commands with their arguments just as y
 
 - [Mario Mellek](https://github.com/Mario-Mellek)
 
-## License
+## LICENSE
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mario-Mellek/simple_shell/blob/master/LICENSE) file for details.
 
-## LICENSE
-
 MIT License
 
-## General
+## General learning objectives
 
 - Who designed and implemented the original Unix operating system
 - Who wrote the first version of the UNIX shell
