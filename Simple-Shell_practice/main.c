@@ -17,7 +17,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 	{
 		j = 0;
 		/*The Prompt being flushed to appear on every submission*/
-		printf("\033[32mSimple-Shell$\033[0m ");
+		printf("\033[32m#cisfun$\033[0m ");
 		fflush(stdout);
 
 		/*Reads user input*/
@@ -42,6 +42,8 @@ int main(int __attribute__((unused)) argc, char **argv)
 			args[0] = line;
 		if (exit_checker(line))
 			break;
+		if (env_checker(line))
+			continue;
 		commandExec(args, argv[0]);
 	}
 	free(line);
