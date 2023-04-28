@@ -26,7 +26,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 		read = getline(&line, &len, stdin);
 		if (read == -1)
 		{
-			/*putchar('\n');*/
 			break;
 		}
 		token = strtok(line, " ");
