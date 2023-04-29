@@ -45,6 +45,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 		commandExec(args, argv[0]);
 	}
 	free(line);
-	return (0);
+	exit(EXIT_SUCCESS);
 }
 
