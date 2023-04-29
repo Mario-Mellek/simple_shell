@@ -13,7 +13,6 @@ int cd_command(char *args[])
 
 	if (dir == NULL)
 	{
-		perror("cd");
 		return (-1);
 	}
 	if (strcmp(dir, "-") == 0)
@@ -21,14 +20,12 @@ int cd_command(char *args[])
 		dir = getenv("OLDPWD");
 		if (dir == NULL)
 		{
-			perror("cd");
 			return (-1);
 		}
 		printf("%s\n", dir);
 	}
 	if (chdir(dir) == -1)
 	{
-		perror("cd");
 		return (-1);
 	}
 	setenv("OLDPWD", getenv("PWD"), 1);
