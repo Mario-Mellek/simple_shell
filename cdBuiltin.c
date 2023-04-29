@@ -10,6 +10,8 @@
 int cd_command(char *args[])
 {
 	char *dir = args[1] != NULL ? args[1] : getenv("HOME");
+	char *currentDir;
+
 
 	if (dir == NULL)
 	{
@@ -25,12 +27,14 @@ int cd_command(char *args[])
 		}
 		printf("%s\n", dir);
 	}
+	currentDir = getcwd(NULL, 0);
 	if (chdir(dir) == -1)
 	{
 		perror("cd");
 		return (-1);
 	}
 	setenv("OLDPWD", getenv("PWD"), 1);
-	setenv("PWD", getcwd(NULL, 0), 1);
+	setenv("PWD", currentDir, 1);
+	free(currentDir);
 	return (0);
 }
