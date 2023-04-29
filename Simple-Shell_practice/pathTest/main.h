@@ -14,5 +14,6 @@ void commandExec(char *args[], char *program_name);
 int exit_checker(char *line);
 void execAbsolute(char *args[], char *program_name);
 void execPath(char *args[], char *program_name);
+int cd_command(char *args[]);
 
 #endif
