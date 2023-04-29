@@ -13,7 +13,6 @@ int cd_command(char *args[])
 
 	if (dir == NULL)
 	{
-		perror("cd");
 		return (-1);
 	}
 	if (strcmp(dir, "-") == 0)
