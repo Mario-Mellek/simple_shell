@@ -10,6 +10,16 @@
 
 void commandExec(char *args[], char *program_name)
 {
+	int i;
+
+	for (i = 0; args[0][i] == ' '; i++)
+	{
+		continue;
+	}
+	for (i = strlen(args[0]) - 1; i >= 0 && args[0][i] == ' '; i--)
+	{
+		args[0][i] = '\0';
+	}
 	if (strchr(args[0], '/') != NULL)
 	{
 		execAbsolute(args, program_name);
