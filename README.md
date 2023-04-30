@@ -8,8 +8,10 @@ Simple Shell allows users to enter commands with their arguments just as they wo
 
 ## Features
 
-- Run commands with their arguments
+- Runs commands with their arguments
+- Runs executable files
 - Handles the PATH
+- Changes directories using `cd`
 - Exit shell with `exit` command or by pressing `Ctrl + D`
 
 ## Getting Started
