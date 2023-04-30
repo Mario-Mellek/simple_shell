@@ -1,6 +1,6 @@
 # Simple Shell
 
-Simple Shell is a basic UNIX command-line interpreter that can execute commands and their arguments. It was built as part of the requirements for the Holberton School System Programming curriculum.
+Simple Shell is a basic UNIX command-line interpreter that can execute commands and their arguments.
 
 ## Functionality
 
